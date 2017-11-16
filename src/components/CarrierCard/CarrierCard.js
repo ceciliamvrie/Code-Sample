@@ -37,12 +37,12 @@ const CarrierCard = ({ expandComponent, features_icons, features_html, impressio
 				<h2>{ name }</h2>
 				<FeaturesIcons features_icons={ features_icons } />
 
-				<div  className="carrierCardTopContainer">
+				<div  className="carrier-card-top-container">
 					<div className="tagline">{ tagline }</div>
 					<Button typeNumber={ typeNumber } action={ action }/>
 				</div>
 
-       <div style={ isClicked ? styles.show : styles.hide }>
+       <div className="features-and-details" style={ isClicked ? styles.show : styles.hide }>
 				 <FeaturesHtml features_icons={ features_icons } features_html={ features_html }/>
  				 <DetailBody name={ name } detailBody={ detailBody }/>
 			 </div>
