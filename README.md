@@ -4,9 +4,9 @@ For The Zebra's consideration, this repo will become private shortly.
 
 
 ## Setting Up: 
-- The Generator I used: react-webpack-generator
+- The Generator I used: `react-webpack-generator`
 
 ## Starting up:
-- npm start
+- `npm start`
 - the app should be on localhost port 8000
 
