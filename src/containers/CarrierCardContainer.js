@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 
 import CarrierCard from '../components/CarrierCard/CarrierCard'
 
-// I feel like it's always a good idea to seperate the state logic from the view,
-//   so that's why I created another container component for the carrier card
+// Sperated the state logic from the view with a container component for the carrier
+//  card
 
 class CarrierCardContainer extends Component {
   constructor(props) {

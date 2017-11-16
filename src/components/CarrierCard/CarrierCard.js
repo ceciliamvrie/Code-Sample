@@ -1,11 +1,13 @@
 import React from 'react'
 
+// components for the card features
 import FeaturesHtml from '../CardFeatures/FeaturesHtml'
 import FeaturesIcons from '../CardFeatures/FeaturesIcons'
-
+// component for the detail body
 import DetailBody from '../DetailBody/DetailBody'
+// button component
 import Button from '../Button/Button'
-
+// styles
 import './styles.sass'
 
 const styles = {
