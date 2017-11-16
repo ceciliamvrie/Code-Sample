@@ -4,10 +4,9 @@ For The Zebra's consideration, this repo will become private shortly.
 
 
 ## Setting Up: 
-- Install Yeoman
 - The Generator I used: react-webpack-generator
 
 ## Starting up:
 - npm start
-- the app should be hosted on port 8000
+- the app should be on localhost port 8000
 
