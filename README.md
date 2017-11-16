@@ -1,5 +1,5 @@
 # The-Zebra-Code-Challenge
-This is the coding challenge I did for The Zebra. It will be taken privately shortly. 
+This is the coding challenge I did for The Zebra. For The Zebra's consideration, this repo will become private shortly. 
 
 
 ## Setting Up: 
