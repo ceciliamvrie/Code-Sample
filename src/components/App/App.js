@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CarrierCardContainer from '../../containers/CarrierCardContainer'
+import CarrierCardContainer from '../../containers/CarrierCardContainer/CarrierCardContainer'
 
 const App = ({ carrierCards }) => (
     <div>
