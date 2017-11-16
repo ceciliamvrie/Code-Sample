@@ -6,33 +6,46 @@ import FeaturesIcons from '../CardFeatures/FeaturesIcons'
 import DetailBody from '../DetailBody/DetailBody'
 import Button from '../Button/Button'
 
+import './styles.sass'
+
 const styles = {
 	expansion: {
-		'height': '250px',
+		'max-height': '500px',
 		'overflowY': 'hidden',
-		'transition': 'height 0.3s ease-in'
+		'transition': 'max-height 0.3s ease-in'
 	},
 	contraction: {
-		'height': '100px',
+		'max-height': '130px',
 		'overflowY': 'hidden',
-		'transition': 'height 0.3s ease-out'
+		'transition': 'max-height 0.3s ease-out'
+	},
+	show: {
+		opacity: '1',
+		'transition': 'opacity 0.1s ease-out'
+	},
+	hide: {
+    'opacity': '0',
+		'transition': 'opacity 0.05s ease-out'
 	}
 }
 
-const CarrierCard = ({ expandComponent, features_icons, features_html, impression_html, name, tagline, typeNumber, action, detailBody, isClicked }) => {
-	console.log(features_icons)
-	return (
-		<div onClick={ expandComponent }>
+const CarrierCard = ({ expandComponent, features_icons, features_html, impression_html, name, tagline, typeNumber, action, detailBody, isClicked }) => (
+		<div className="carrier-card" onClick={ expandComponent }>
 			<div style={ isClicked ? styles.expansion : styles.contraction }>
-				<h3>{ name }</h3>
+				<h2>{ name }</h2>
 				<FeaturesIcons features_icons={ features_icons } />
-				<div>{ tagline }</div>
-				<Button typeNumber={ typeNumber } action={ action }/>
-				<FeaturesHtml features_icons={ features_icons } features_html={ features_html }/>
-				<DetailBody name={ name } detailBody={ detailBody }/>
+
+				<div  className="carrierCardTopContainer">
+					<div className="tagline">{ tagline }</div>
+					<Button typeNumber={ typeNumber } action={ action }/>
+				</div>
+
+       <div style={ isClicked ? styles.show : styles.hide }>
+				 <FeaturesHtml features_icons={ features_icons } features_html={ features_html }/>
+ 				 <DetailBody name={ name } detailBody={ detailBody }/>
+			 </div>
 			</div>
 		</div>
-	)
-}
+)
 
 export default CarrierCard

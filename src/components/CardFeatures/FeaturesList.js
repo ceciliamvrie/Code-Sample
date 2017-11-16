@@ -1,11 +1,13 @@
 import React from 'react'
 
+import './styles.sass'
+
 // the features list used to come with a noFeatures option stated so that if there were no features passed,
 //  it would render a default 'No features listed' but it lead to some bugs and couldn't get resolved in time
 
 const FeaturesList = ({ list = [], noFeatures }) => {
   return (
-    <div>
+    <div className="featureslist">
       <ul>
         {
          list.map(({ name }, key) => {

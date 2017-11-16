@@ -8,7 +8,7 @@ import './styles.sass'
 const Button = ({ typeNumber, action }) => (
   <div>
     {
-        typeNumber === 2 ? null : <button className={ typeNumber <= 1 ? 'blue': 'orange' }><a target="_blank" href={ action.link }>{ action.link_text || 'Get Quote' }</a></button>
+        typeNumber === 2 ? null : <a target="_blank" href={ action.link }><button className={ typeNumber <= 1 ? 'blue': 'orange' }>{ action.link_text || 'Get Quote' }</button></a>
     }
   </div>
 )

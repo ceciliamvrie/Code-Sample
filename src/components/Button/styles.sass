@@ -1,15 +1,44 @@
-$purple: #5c6cff
+// variables: button colors
 $orange: linear-gradient(350deg, #f87000 40%, #f8ae00 85%)
 $blue: linear-gradient(350deg, #6169f4 40%, #1cbeec 85%)
-$gray: #959595
 
+// all buttons will inherit from this class
+.button
+  outline: none
+  height: 40px
+  text-align: center
+  width: 130px
+  border: none
+  border-radius: 40px
+  background: #fff
+  letter-spacing: 1px
+  text-shadow: 0
+  color: white
+
+  display: inline
+
+a
+  size: 12px
+  weight: 500
+  text-decoration: none
+
+// colors of buttons
 .blue
+	@extend .button
 	background-image: $blue
 
+button.blue
+  float: right
+  margin-top: -2%
 
 .orange
+	@extend .button
 	background-image: $orange
 
+button.orange
+  float: right
+  margin-top: -8%
 
 .invisible
+	@extend .button
 	display: none
