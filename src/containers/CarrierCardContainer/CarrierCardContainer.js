@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 
 import CarrierCard from '../../components/CarrierCard/CarrierCard'
 
-// Sperated the state logic from the view with a container component for the carrier
-//  card
-
+// the state logic is seperated from the view with a container component for the carrier card
 class CarrierCardContainer extends Component {
   constructor(props) {
     super(props)
@@ -12,18 +10,20 @@ class CarrierCardContainer extends Component {
       isClicked: false
     }
   }
-
+  
+  // expandComponent gets passed to carrier card which changes the state isClicked on click
   expandComponent() {
     this.setState({
       isClicked: !this.state.isClicked
     })
   }
-
+  
+  // the smaller details of the card data get passed into the carrier card as props
   render() {
     const { name, tagline, impression_html, type, features_html, features, detail_body, action} = this.props.card
     return(
         <CarrierCard
-					expandComponent={ this.expandComponent.bind(this)}
+	  expandComponent={ this.expandComponent.bind(this) }
           typeNumber={ type }
           isClicked={ this.state.isClicked }
           features_icons={ features }
