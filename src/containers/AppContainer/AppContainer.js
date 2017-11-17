@@ -21,12 +21,13 @@ class AppContainer extends Component {
   }
 
   componentDidMount() {
-		// fakeFetch gets called on initial load
+  // fakeFetch gets called on initial load and populates the state
     fakeFetch().then(carrierCards => {
       this.setState({ carrierCards })
     })
   }
-
+  
+  // app container then passes the carrier card data from the state into the app component
   render() {
     return (
       <div>
