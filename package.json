@@ -72,8 +72,10 @@
   },
   "dependencies": {
     "core-js": "^2.0.0",
+    "node-sass": "^4.7.1",
     "normalize.css": "^4.0.0",
     "react": "^15.6.2",
-    "react-dom": "^15.0.0"
+    "react-dom": "^15.0.0",
+    "sass-loader": "^6.0.6"
   }
 }
