@@ -2,16 +2,16 @@ import React from 'react'
 
 import './styles.sass'
 
-// the features list used to come with a noFeatures option stated so that if there were no features passed,
-//  it would render a default 'No features listed' but it lead to some bugs and couldn't get resolved in time
+// the featureslist component renders the names of every feature item in a list that goes under the
+//   carrier card's icons
 
-const FeaturesList = ({ list = [], noFeatures }) => {
+const FeaturesList = ({ list = [] }) => {
   return (
     <div className="featureslist">
       <ul>
         {
-         list.map(({ name }, key) => {
-            return <li>{name}</li>
+         list.map(({ name }) => {
+            return <li key={name}>{name}</li>
           })
         }
       </ul>

@@ -5,13 +5,13 @@ import React from 'react'
 
 // I used an svg-loader for webpack and react to be able to import all svgs as urls
 
-const FeaturesIcons = ({ features_icons = [], noFeatures }) => {
+const FeaturesIcons = ({ features_icons = []}) => {
   return (
     <div>
         {
-         features_icons.map(({ icon, name }, key) => {
+         features_icons.map(({ icon, name }) => {
             const Icon = require(`../../assets/${icon}.svg`)
-            return <Icon />
+            return <Icon key={name}/>
           })
         }
     </div>

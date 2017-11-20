@@ -3,11 +3,12 @@ import App from '../../components/App/App'
 import { carrier_cards } from '../../../carrier_cards.json'
 
 // fakeFetch simulates a fake request to the carrier_cards API
-const fakeFetch = (file) => (
+const fakeFetch = () => (
   new Promise((resolve, reject) => {
     const id = setTimeout(() => {
       clearTimeout(id)
-      resolve(carrier_cards)
+      if (carrier_cards) { resolve(carrier_cards) }
+      reject(carrier_cards)
     }, 500)
   })
 )
@@ -26,7 +27,7 @@ class AppContainer extends Component {
       this.setState({ carrierCards })
     })
   }
-  
+
   // app container then passes the carrier card data from the state into the app component
   render() {
     return (

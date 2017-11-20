@@ -12,12 +12,12 @@ import './styles.sass'
 
 const styles = {
 	expansion: {
-		'max-height': '500px',
+		'maxHeight': '500px',
 		'overflowY': 'hidden',
 		'transition': 'max-height 0.3s ease-in'
 	},
 	contraction: {
-		'max-height': '130px',
+		'maxHeight': '130px',
 		'overflowY': 'hidden',
 		'transition': 'max-height 0.3s ease-out'
 	},
@@ -31,7 +31,7 @@ const styles = {
 	}
 }
 
-const CarrierCard = ({ expandComponent, features_icons, features_html, impression_html, name, tagline, typeNumber, action, detailBody, isClicked }) => (
+const CarrierCard = ({ expandComponent, features_icons, features_html, name, tagline, typeNumber, action, detailBody, isClicked }) => (
 		<div className="carrier-card" onClick={ expandComponent }>
 			<div style={ isClicked ? styles.expansion : styles.contraction }>
 				<h2>{ name }</h2>
